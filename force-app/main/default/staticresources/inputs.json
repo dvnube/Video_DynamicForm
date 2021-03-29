@@ -1,0 +1,50 @@
+[
+    {
+        "key": "nameKey",
+        "order": 10,
+        "value": {
+            "type": "text",
+            "label": "Nome completo",
+            "attributeName": "nomeCompleto",
+            "tooltip": "Digite o seu nome completo",
+            "required": true
+        }
+    },
+    {
+        "key": "cpfKey",
+        "order": 20,
+        "value": {
+            "type": "text",
+            "label": "CPF",
+            "attributeName": "cpf",
+            "placeholder": "111.222.333-44",
+            "pattern": "\\d{3}\\.\\d{3}\\.\\d{3}-\\d{2}",
+            "messageWhenPatternMismatch": "O CPF digitado não é válido",
+            "required": true
+        }
+    },
+    {
+        "key": "nascimentoKey",
+        "order": 30,
+        "value": {
+            "type": "date",
+            "label": "Data de nascimento",
+            "attributeName": "dataNascimento",
+            "placeholder": "28/08/1990",
+            "required": true
+        }
+    },
+    {
+        "key": "valorKey",
+        "order": 40,
+        "value": {
+            "type": "number",
+            "label": "Valor desejado",
+            "attributeName": "valor",
+            "formatter": "currency",
+            "tooltip": "Digite o valor que deseja solicitar a simulação",
+            "placeholder": "R$ 30.000,00",
+            "required": true
+        }
+    }
+]

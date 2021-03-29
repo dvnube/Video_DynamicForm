@@ -1,0 +1,35 @@
+<template>
+    <div class="container">
+        <div class="title slds-align_absolute-center">
+            <h2 class="slds-card__header-title">Simulação</h2>
+        </div>
+        <div class="grid-inputs">
+            <template for:each={inputs} for:item="input">
+                <div class="input" key={input.key}>
+                    <lightning-input
+                        type={input.value.type}
+                        label={input.value.label}
+                        data-attributename={input.value.attributeName}
+                        formatter={input.value.formatter}
+                        pattern={input.value.pattern}
+                        message-when-pattern-mismatch={input.value.messageWhenPatternMismatch}
+                        placeholder={input.value.placeholder}
+                        onchange={handleChangeInput}
+                        field-level-help={input.value.tooltip}
+                        required={input.value.required}
+                        value={input.value.value}
+                        min={input.value.min}
+                    ></lightning-input>
+                </div>
+            </template>
+        </div>
+        <div class="slds-text-align_right">
+            <lightning-button
+                variant="brand"
+                label="Simular"
+                disabled={buttonDisabled}
+                onclick={handleSimulation}
+            ></lightning-button>
+        </div>
+    </div>
+</template>
